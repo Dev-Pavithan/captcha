@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/captcha/static/css/main.6478cf35.css",
+    "main.js": "/captcha/static/js/main.2c122bf1.js",
+    "index.html": "/captcha/index.html",
+    "main.6478cf35.css.map": "/captcha/static/css/main.6478cf35.css.map",
+    "main.2c122bf1.js.map": "/captcha/static/js/main.2c122bf1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6478cf35.css",
+    "static/js/main.2c122bf1.js"
+  ]
+}
