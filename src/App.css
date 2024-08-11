@@ -1,38 +1,86 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(270deg, #b3c7f9, #e9f1fc, #f5d7ff, #f3b6db);
+  background-size: 800% 800%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.captcha-container {
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  background-color: #ffffff; /* White background for better contrast */
+  border-radius: 12px; /* Rounded corners for a softer look */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for depth */
+  border: 1px solid #e0e0e0; /* Light border for definition */
+  max-width: 350px; /* Restrict the width for better layout */
+  margin: 20px auto; /* Center the container horizontally with some margin */
+}
+
+
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
   color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #357ab7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#captchaInput {
+  padding: 12px 15px; /* More padding for a better touch target */
+  width: 220px;
+  margin-bottom: 10px;
+  font-size: 18px; /* Slightly larger font size */
+  border-radius: 80px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+#captchaInput::placeholder {
+  color: #999; /* Light gray color for the placeholder text */
+  font-style: italic; /* Italicize placeholder text */
+}
+
+#captchaInput:focus {
+  border-color: #4a90e2; /* Change border color on focus */
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
